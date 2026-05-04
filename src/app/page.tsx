@@ -83,18 +83,18 @@ export default function Home() {
         <main className="container" style={{ paddingTop: "8rem", paddingBottom: "10rem", textAlign: "center" }}>
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
             <h1 style={{ 
-              fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 7vw, 4.5rem)", 
-              fontWeight: "900", lineHeight: 1.1, marginBottom: "3rem", color: "#000", wordBreak: "keep-all"
+              fontFamily: "var(--font-serif)", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", 
+              fontWeight: "900", lineHeight: 1.2, marginBottom: "2rem", color: "#000", wordBreak: "keep-all"
             }}>
               나도 할 수 있는 <br /> <span style={{ color: "#2563eb" }}>AI 실전 코스</span>
             </h1>
           </motion.div>
 
           {/* Slogan & Copyright (High-end Diagonal) */}
-          <section style={{ marginTop: "15rem", marginBottom: "15rem" }}>
+          <section style={{ marginTop: "10rem", marginBottom: "10rem" }}>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} style={{ textAlign: "center" }}>
               <div style={{ 
-                fontFamily: "var(--font-handwriting)", fontSize: "clamp(2.5rem, 6vw, 4.5rem)", 
+                fontFamily: "var(--font-handwriting)", fontSize: "clamp(1.5rem, 4vw, 2.5rem)", 
                 color: "#2563eb", marginBottom: "2rem", transform: "rotate(-4deg)", fontStyle: "italic", wordBreak: "keep-all",
                 lineHeight: "1.2"
               }}>
