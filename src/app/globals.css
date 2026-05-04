@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&display=swap');
+
 :root {
   --background: #fdfdfd;
   --foreground: #1a1a1a;
-  --primary: #6366f1;
+  --primary: #2563eb;
   --secondary: #666666;
   --accent: #1a1a1a;
+  --font-serif: 'Playfair Display', serif;
+  --font-handwriting: 'Dancing Script', cursive;
 }
 
 * {
@@ -15,26 +19,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 4rem;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--primary);
+  padding: 0 2rem;
 }
 
 .btn-primary {
@@ -51,6 +43,88 @@ a:hover {
 
 .btn-primary:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  background: var(--primary);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+}
+
+.video-card {
+  border-radius: 32px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.5s ease;
+}
+
+/* --- Responsive Utilities --- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.video-column {
+  width: 350px;
+}
+
+.video-item {
+  height: 480px;
+}
+
+.mobile-only { display: none; }
+.desktop-only { display: flex; }
+
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
+
+  .mobile-hidden { display: none; }
+
+  .video-column {
+    width: 100vw;
+  }
+
+  .video-item {
+    height: 60vh;
+  }
+
+  .input-group {
+    grid-template-columns: 1fr;
+  }
 }
